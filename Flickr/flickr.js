@@ -1,6 +1,6 @@
 var slideshow = function(tag) {
 	// console.log(tag);
-	var url = "http://api.flickr.com/services/feeds/photos_public.gne?" +
+	var url = "http://api.flickr.com/services/feeds/photos_public.gne?" + 
 			"tags=" + tag + "&format=json&jsoncallback=?";
 	var displayMessage = function (messageIndex) {
 		if (tag !== "")  {
@@ -24,10 +24,10 @@ var slideshow = function(tag) {
 }
 
 var main = function () {
-	"use strict";
+	"use strict"; 
 	var tag = "";
 	var $inputLabel = $("<p>").text("Введите тег для темы слайд-шоу: "),
-		$input = $("<input>").addClass("tag"),
+		$input = $("<input>").addClass("tag"), 				
 		$button = $("<button>").text("Поиск");
 	$button.on("click", function () {
 		var tag = "";
@@ -39,7 +39,7 @@ var main = function () {
 			slideshow(tag);
 		}
 	});
-	$("main .content").append($inputLabel).append($input).append($button);
+	$("main .content").append($inputLabel).append($input).append($button); 
 	// console.log(tag);
 };
-$(document).ready(main);
+$(document).ready(main); 
